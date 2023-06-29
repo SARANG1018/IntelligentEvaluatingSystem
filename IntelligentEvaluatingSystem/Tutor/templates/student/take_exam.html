@@ -1,0 +1,61 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  
+
+
+</head>
+<br><br>
+
+<div class="container my-4">
+    <div class="jumbotron">
+        <!-- <form action={%  url 'start-exam' course.id  %} method="POST"> -->
+	      <h3 class="text-info text-center">Before you start the Exam, here are the rules</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+
+                    <h4 class="card-title">Exam Details :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <!-- <li>Exam Name : {{course.course_name}}</li>
+                            <li>Total Question : {{total_questions}}</li>
+                            <li>Total Marks : {{total_marks}}</li> -->
+                            <li>Exam Name : Mensuration</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Rules :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>All questions are multiple choice question.</li>
+                            <li><span class="text-danger">Only one choice is correct.</span></li>
+                
+                            <li>Try to answer as quickly as you can.</li>
+                            <!-- <li>If you press refresh or go back to the previous page, there will be a new question for you and the question you were on will be counted as attempted.</li> -->
+                            <li>Questions are displayed randomly for every user.</li>
+                            <!-- <li>You will be told your marks immediately when you submit the answer.</li> -->
+                            <li>Feedback will be provided on the basis of performance after submission</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-info">Let's Start</a>
+                    <!-- <input class="btn btn-info btn-lg"   type="submit" value="Lets Start"> -->
+                </div>  
+                <div class="card-footer">Best Of Luck</div>  
+            </div>  
+        </div>  
+    <!-- </form> -->
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
