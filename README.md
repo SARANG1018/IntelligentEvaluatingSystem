@@ -39,7 +39,7 @@ Install the dependencies:
 pip install -r requirements.txt
 ```
 Run database migrations:
-'''
+```
 python manage.py migrate
 ```
 
